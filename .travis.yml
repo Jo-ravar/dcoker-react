@@ -6,6 +6,5 @@ before_install:
   - docker build -t ravi/dcoker-react -f Dockerfile.dev .
 
 script:
-  - docker run ravi/dcoker-react npm run test -- --coverage
+  - docker run -e CI=true ravi/dcoker-react  npm run test -- --coverage
 
-  
